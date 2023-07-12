@@ -43,4 +43,10 @@ class TasksController extends Controller
         
     }
 
+    public function destroy(tasks $tasks)
+    {
+        $tasks->delete();
+        return redirect('/tasks')->with('success', 'Data berhasil dihapus');
+    }
+
 }
